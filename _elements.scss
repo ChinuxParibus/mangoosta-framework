@@ -1,0 +1,101 @@
+/**********************************************************************
+ * Elements.scss - Define classes for most HTML general elements
+ * Jhony Grillet @ Mangoosta
+ * License: MIT
+ **********************************************************************/
+
+@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+
+body {
+	font-family: 'Open Sans', Sans;
+	@extend .mangoosta-normal-text;
+}
+h1 { font-size: 3.5em; }
+h2 { font-size: 2.5em; }
+p { font-size: 1.1em; }
+a, a:link, a:visited {
+	@extend .mangoosta-coloured-text;
+	text-decoration: none;
+}
+a:hover, a:focus { @extend .mangoosta-secondary-text; }
+.mangoosta {
+	&-element-left { float: left; }
+	&-element-right { float: right; }
+	&-smooth-anim { transition: all .3s; }
+	&-responsive-image, &-menu { display: none; }
+	&-image {
+		width: 128px;
+		height: 128px;
+		margin: 12px;
+	}
+	&-logo {
+		@extend .mangoosta-coloured-text;
+		padding: 8px;
+		height: 48px;
+	}
+	&-media {
+		display: flex;
+		align-items: flex-start;
+	}
+	&-items {
+		list-style-type: none;
+		-webkit-margin-block-start: 0;
+		-webkit-margin-block-end: 0;
+		-webkit-padding-inline-start: 0;
+		margin-block-start: 0;
+		margin-block-end: 0;
+		padding-inline-start: 0;
+		display: block;
+		margin: 0;
+		float: right;
+	}
+	&-item {
+		display: inline;
+		float: left;
+	}
+	&-fixed-navbar {
+		@extend .mangoosta-primary-back;
+		position: fixed;
+		top: 0;
+		left: 0;
+		display: inline-block;
+		margin: 0 auto;
+		z-index: 9999;
+		line-height: 64px;
+		width: 100%;
+		height: 64px;
+	}
+	&-container {
+		width: 80%;
+		margin: 64px auto auto;
+	}
+	&-fixed-navbar-inner {
+		width: 80%;
+		margin: 0 auto;
+		a {
+			@extend .mangoosta-coloured-text;
+			font-weight: bold;
+		}
+	}
+	&-item a, &-item a:link, &-item a:visited {
+		@extend .mangoosta-coloured-text;
+		@extend .mangoosta-primary-back;
+		font-weight: bold;
+		display: block;
+		text-decoration: none;
+		padding: 0 12px;
+	}
+	&-item a:hover, &-item a:focus { @extend .mangoosta-secondary-back; }
+
+	&-padded-text { padding: 0 32px; }
+
+	&-card {
+		box-shadow: 1px 2px 4px $normal;
+		padding: 8px;
+		margin: 8px 8px;
+	}
+	&-card:hover { box-shadow: 1px 8px 16px $normal; }
+	&-centered-text { text-align: center; }
+	&-justify-text { text-align: justify; }
+	&-right-text { text-align: right; }
+}

@@ -1,0 +1,63 @@
+/**********************************************************************
+ * Media.scss - Define media query for all classes and elements
+ * Jhony Grillet @ Mangoosta
+ * License: MIT
+ **********************************************************************/
+
+@media only screen and (max-width: 960px) {
+	li { width: $grid-size; }
+
+	.h1-mobile { font-size: 2.8em; }
+
+	.h2-mobile { font-size: 2em; }
+
+	.mangoosta {
+		&-responsive-column {
+			width: calculate-grid(12) !important;
+			padding: $grid-padding;
+			float: left;
+		}
+		&-container {
+			width: 90%;
+			margin: 64px auto auto;
+		}
+		&-responsive-image {
+			display: inline-block !important;
+			height: 128px;
+		}
+		&-items {
+			width: 100%;
+		}
+		&-menu {
+			display: inline;
+			width: auto;
+			background-image: url("data:image/svg+xml;base64,CjxzdmcgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDEwMDAgMTAwMCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTAwMCAxMDAwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPG1ldGFkYXRhPiBTdmcgVmVjdG9yIEljb25zIDogaHR0cDovL3d3dy5vbmxpbmV3ZWJmb250cy5jb20vaWNvbiA8L21ldGFkYXRhPgogIDxnPjxnPjxnPjxwYXRoIGQ9Ik05NTguMywyOC41SDQxLjdDMjQuMiwyOC41LDEwLDQyLjcsMTAsNjAuMXYxNDAuOGMwLDE3LjUsMTQuMiwzMS43LDMxLjcsMzEuN2g5MTYuN2MxNy41LDAsMzEuNy0xNC4yLDMxLjctMzEuN1Y2MC4xQzk5MCw0Mi43LDk3NS44LDI4LjUsOTU4LjMsMjguNXoiIHN0eWxlPSJmaWxsOiNGRkZGRkYiPjwvcGF0aD48cGF0aCBkPSJNOTU4LjMsMzk3LjlINDEuN2MtMTcuNSwwLTMxLjcsMTQuMi0zMS43LDMxLjd2MTQwLjhjMCwxNy41LDE0LjIsMzEuNywzMS43LDMxLjdoOTE2LjdjMTcuNSwwLDMxLjctMTQuMiwzMS43LTMxLjdWNDI5LjZDOTkwLDQxMi4yLDk3NS44LDM5Ny45LDk1OC4zLDM5Ny45eiIgc3R5bGU9ImZpbGw6I0ZGRkZGRiI+PC9wYXRoPjxwYXRoIGQ9Ik05NTguMyw3NjcuNEg0MS43Yy0xNy41LDAtMzEuNywxNC4yLTMxLjcsMzEuN3YxNDAuOGMwLDE3LjUsMTQuMiwzMS43LDMxLjcsMzEuN2g5MTYuN2MxNy41LDAsMzEuNy0xNC4yLDMxLjctMzEuN1Y3OTkuMUM5OTAsNzgxLjYsOTc1LjgsNzY3LjQsOTU4LjMsNzY3LjR6IiBzdHlsZT0iZmlsbDojRkZGRkZGIj48L3BhdGg+PC9nPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48L2c+PC9zdmc+CiAg");
+			background-repeat: no-repeat;
+			background-size: 32px 32px;
+			background-position: center;
+		}
+		&-mobile-text-centered {
+			text-align: center;
+		}
+		&-mobile-text-justified {
+			text-align: justify;
+		}
+		&-mobile-text-right {
+			text-align: right;
+		}
+		&-fixed-navbar-inner {
+			width: inherit;
+		}
+		&-logo {
+			display: none;
+		}
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.mangoosta {
+		&-hide-on-mobile {
+			display: none;
+		}
+	}
+}

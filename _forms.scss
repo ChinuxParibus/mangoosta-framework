@@ -1,0 +1,83 @@
+/**********************************************************************
+ * Forms.scss - Define classes for all input type elements
+ * Jhony Grillet @ Mangoosta
+ * License: MIT
+ **********************************************************************/
+
+input[type="submit"].mangoosta-btn {
+	@extend .mangoosta-secondary-back;
+	@extend .mangoosta-secondary-border;
+	@extend .mangoosta-coloured-text;
+	padding: 0 8px;
+	width: auto;
+}
+.mangoosta-btn:hover {
+	box-shadow: 1px 8px 16px $normal;
+}
+input, textarea, select {
+	font-family: 'Open Sans', Sans;
+	border: none;
+	border-bottom: 1px solid rgba(0,0,0,.32);
+	display: inline-block;
+	font-size: 16px;
+	margin: 8px 0;
+	padding: 16px 0;
+	width: 100%;
+	background: inherit;
+	text-align: left;
+	line-height: 24px;
+	color: inherit;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+textarea {
+	height: auto;
+	resize: vertical;
+	overflow-y: hidden;
+}
+select {
+	background-image: url("data:image/svg+xml;base64,CjxzdmcgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDEwMDAgMTAwMCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTAwMCAxMDAwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPG1ldGFkYXRhPiBTdmcgVmVjdG9yIEljb25zIDogaHR0cDovL3d3dy5vbmxpbmV3ZWJmb250cy5jb20vaWNvbiA8L21ldGFkYXRhPgogIDxnPjxwYXRoIGQ9Ik0xMCwyMzIuN2w0OTAsNTM0LjVsNDkwLTUzNC41SDEweiIgc3R5bGU9ImZpbGw6I0FDQUNBQyI+PC9wYXRoPjwvZz48L3N2Zz4KICA=");
+	background-size: 16px 16px;
+	background-position: 100%;
+	background-repeat: no-repeat;
+}
+input:focus,
+textarea:focus, select:focus {
+	border-bottom: 1px solid $primary;
+}
+input[type="checkbox"], input[type="radio"] {
+	@extend .mangoosta-primary-border;
+	width: 16px;
+	height: 16px;
+	color: $normal;
+	box-shadow: none;
+}
+input[type="checkbox"]:checked, input[type="radio"]:checked {
+	@extend .mangoosta-primary-back;
+}
+label {
+	padding: 0 8px;
+}
+.mangoosta-input-focused {
+	outline: none;
+}
+.mangoosta-input-wrong {
+	border-bottom: 1px solid $wrong !important;
+}
+.mangoosta-btn {
+	font-family: 'Open Sans', Sans;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 64px;
+	border-radius: 1px;
+	margin-right: 4px;
+	@extend .mangoosta-primary-back;
+	@extend .mangoosta-primary-border;
+	@extend .mangoosta-coloured-text;
+	box-shadow: 1px 1px 8px $normal;
+	-webkit-touch-callout: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}

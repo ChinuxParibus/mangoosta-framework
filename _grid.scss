@@ -1,0 +1,28 @@
+/**********************************************************************
+ * Grid.scss - Define margin & padding for 12-column based design
+ * Jhony Grillet @ Mangoosta
+ * License: MIT
+ **********************************************************************/
+
+$total-columns: 12;
+$grid-size: 100%;
+$grid-padding: .5%;
+
+@function calculate-grid($cols) {
+	@return ( $grid-size / $total-columns ) * $cols - 1%;
+}
+
+.mangoosta {
+	&-grid {
+		width: $grid-size;
+		$col: 0;
+	}
+	@for $i from 1 through 12 {
+		&-column-#{$i} {
+			width: calculate-grid($i);
+			padding: $grid-padding;
+			float: left;
+		}
+	}
+}
+

@@ -1,0 +1,35 @@
+/**********************************************************************
+ * Colors.scss - Define colors for HTML elements (based on Material Design)
+ * Jhony Grillet @ Mangoosta
+ * License: MIT
+ **********************************************************************/
+
+$primary:		#60057A;
+$secondary: #1E7A05;
+$coloured:	#FFFAF0;
+$normal:		#444;
+$wrong:			#7A041E;
+
+$colors: 	("primary",$primary),
+					("secondary",$secondary),
+					("coloured",$coloured),
+					("normal",$normal),
+					("wrong",$wrong);
+
+@each $class, $color in $colors {
+	.mangoosta {
+		&-#{$class} {
+			&-back { background-color: $color; }
+			&-text { color: $color; }
+		}
+	}
+}
+
+.mangoosta-primary-border {
+		border: 1px solid $primary;
+}
+
+.mangoosta-secondary-border {
+	border: 1px solid $secondary;
+}
+
