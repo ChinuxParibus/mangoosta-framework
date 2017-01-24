@@ -98,4 +98,5 @@ a:hover, a:focus { @extend .mangoosta-secondary-text; }
 	&-centered-text { text-align: center; }
 	&-justify-text { text-align: justify; }
 	&-right-text { text-align: right; }
+	&-show-on-mobile { display: none; }
 }
